@@ -77,12 +77,12 @@ function obtenerNumAleatorio(numero){
 function dadoLegendario(numObtenido, msg, mensajeSalida){
     //Convertimos numero en enunciado legendario
     if(numObtenido===8 || numObtenido===9){
-        msg.reply(mensajeSalida+"Exito con consecuencia negativa")
+        msg.reply(mensajeSalida+"<:YinB:980820895377551410>")
     }else{
         if(numObtenido>=10){
-            msg.reply(mensajeSalida+"Exito con consecuencia positiva")
+            msg.reply(mensajeSalida+"<:MegaB:980820936884355103>")
         }else{
-            msg.reply(mensajeSalida+"Máximo potencial")
+            msg.reply(mensajeSalida+"<:HeptaB:980820818223329312>")
         }
     }
     
