@@ -28,37 +28,33 @@ function funcionesBot(msg){
     
     mensaje= mensaje.split(" ");
 
-    if(mensaje[0]==="TIRAR"){
+    if(comandosTirar(mensaje[0])){
         
         posiblesTiradas(msg, mensaje[1]);
     }
 }
 
+function comandosTirar(comando){
+    return (comando==="TIRAR" || comando ==="T")
+}
+
 function posiblesTiradas(msg, argumento){
     let mensajeSalida = "Has obtenido un "
-    if(argumento==="DLEGENDARIO"){
+    if(argumento==="DLEGENDARIO" || argumento==="DL"){
         let numObtenido = obtenerNumAleatorio(12);
         dadoLegendario(numObtenido, msg, mensajeSalida);
         return
         
-    }else 
-    
-    if(argumento==="D4"){
+    }else if(argumento==="D4"){
         mensajeSalida += obtenerNumAleatorio(4).toString();
         
-    }else
-    
-    if(argumento==="D6"){
+    }else if(argumento==="D6"){
         mensajeSalida += (obtenerNumAleatorio(7)-1).toString();
         
-    }else
-    
-    if(argumento==="D8"){
+    }else if(argumento==="D8"){
         mensajeSalida += obtenerNumAleatorio(8).toString();
         
-    }else
-    
-    if(argumento==="D10"){
+    }else if(argumento==="D10"){
         mensajeSalida += (obtenerNumAleatorio(10)-1).toString()
         
     }else{
